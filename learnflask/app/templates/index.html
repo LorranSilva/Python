@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tartaruga</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min') }}"> <!-- url_for cria um caminho parcial ate a url indicada -->
+</head>
+<body>
+	<div>
+		<h1>Tartarugão</h1>
+		{% if user %}  <!-- {% %} é usada para executar logica-->
+		<p>Canudos do, {{ user }}</p> <!-- {{}} para exibir mensagem -->
+		{% else %}
+		<p>Sai canudo!!!</p>
+		{% endif %}  <!-- como a indentação no html não é obrigatoria, deve-se indicar o final da execução do if, vale para for e outros comandos -->
+	</div>
+	{% endblock %}
+	<!-- Jquery é necessario para plugins javascript no bootstrap -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="{{ url_for('static', filename='jsbootstrap.min.js') }}"></script>
+</body>
+</html>
