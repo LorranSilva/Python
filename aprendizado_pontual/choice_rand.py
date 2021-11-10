@@ -1,7 +1,7 @@
 import os
 import random
 
-dir = 'C:/Users/Silva Tito/Pictures/Adventure Time'
+dir = 'C:\\'
 filename = random.choice(os.listdir(dir))
 path = os.path.join(dir, filename)
 print(filename)

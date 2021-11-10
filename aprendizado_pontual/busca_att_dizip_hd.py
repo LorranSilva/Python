@@ -17,7 +17,7 @@ with MailBox(imap).login(email, password) as mailbox:
             #  verificando se é um arquivo zip
             if att.filename[-4::] == '.zip' and att.content_type == 'application/x-zip-compressed' or att.filename[-3::] == '.gz':
                 #  passando o caminho
-                filepath = os.path.join('C:\\Users\\Silva Tito\\Downloads', att.filename)
+                filepath = os.path.join('C:\\', att.filename)
                 if(os.path.exists(filepath)):
                     print('Arquivo já existe!')
                 else:
@@ -31,4 +31,4 @@ with MailBox(imap).login(email, password) as mailbox:
                             list_zip = extra.namelist()
                             for file_to_ext in list_zip:
                                 if file_to_ext.endswith('.xml') or file_to_ext.endswith('.pdf'):
-                                    extra.extract(file_to_ext, 'C:\\Users\\Silva Tito\\Downloads\\archives_extracts')
+                                    extra.extract(file_to_ext, 'C:\\')

@@ -55,7 +55,7 @@ def send_email(target_email=None):
 
 # passar o nome do diretorio que deseja escanear // send the directory name that You wish to scan
 # dir = input('Name of directory to scan:\n')
-dir = 'C:\\Users\\Silva Tito\\Music\\Animes'
+dir = 'C:\\'
 
 # organizar itens em um dict
 organizador = {'pastas': dict()}
